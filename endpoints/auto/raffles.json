@@ -1,0 +1,64 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'raffles'",
+        "route": "/raffles",
+        "method": "GET",
+        "sql": "SELECT * FROM raffles",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "getById": {
+        "description": "Gets an entry from 'raffles' by its primary key",
+        "route": "/raffles/$raffleId",
+        "method": "GET",
+        "sql": "SELECT * FROM raffles WHERE raffleId = $raffleId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "create": {
+        "description": "Creates a new entry in 'raffles'",
+        "route": "/raffles",
+        "method": "POST",
+        "sql": "INSERT INTO raffles (sneakerName, release_date, store_link, image_url) VALUES ($sneakerName, $release_date, $store_link, $image_url)",
+        "request_body_params": [
+            "sneakerName",
+            "release_date",
+            "store_link",
+            "image_url"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "update": {
+        "description": "Updates an existing entry in 'raffles' by its primary key",
+        "route": "/raffles/$raffleId",
+        "method": "PUT",
+        "sql": "UPDATE raffles SET sneakerName = $sneakerName, release_date = $release_date, store_link = $store_link, image_url = $image_url WHERE raffleId = $raffleId",
+        "request_body_params": [
+            "sneakerName",
+            "release_date",
+            "store_link",
+            "image_url"
+        ],
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "delete": {
+        "description": "Deletes an existing entry in 'raffles' by its primary key",
+        "route": "/raffles/$raffleId",
+        "method": "DELETE",
+        "sql": "DELETE FROM raffles WHERE raffleId = $raffleId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}

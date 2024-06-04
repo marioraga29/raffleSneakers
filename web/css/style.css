@@ -1,0 +1,65 @@
+.dark {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+}
+
+.container-fluid {
+    background-color: #27303d; /* Fondo oscuro para el contenedor central */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#flecha {
+    margin-top: 40px;
+}
+
+#title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffee57; /* Color naranja */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif; /* Fuente estilizada */
+}
+
+#subtitle {
+    font-size: 1.5rem;
+    color: #ecf0f1; /* Color claro */
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.container .row {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: #7bb060; /* Fondo oscuro para las cards */
+    color: #000000; /* Texto blanco para las cards */
+    border: none; /* Sin bordes para las cards */
+}
+
+.card-img-top {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
